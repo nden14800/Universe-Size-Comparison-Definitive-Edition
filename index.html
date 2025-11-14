@@ -37,7 +37,7 @@
         /* --- Main Layout Grid --- */
         #page-container {
             display: grid;
-            grid-template-rows: 1fr auto;
+            grid-template-rows: minmax(0, 1fr) auto; /* 修正点：UIがはみ出さないように調整 */
             grid-template-columns: 1fr 2fr 1fr;
             grid-template-areas:
                 "info-tl visual info-br"
@@ -379,11 +379,11 @@
             { name: "スローン・グレートウォール", nameEn: "Sloan Great Wall", fictionType: 0, sizeLy: "13.7億 ly", sizeValue: 13.7, sizeUnitJp: '億', sizeMeter: "Length ≈ 1.37 Billion light-years", logSize: 9.14, description: "かつて知られていた宇宙最大の構造物の一つ。", descriptionEn: "Formerly one of the largest known structures in the universe.", bgColor: "linear-gradient(135deg, #f48fb1 0%, #ad1457 100%)" },
             { name: "ジャイアント・アーク", nameEn: "Giant Arc", fictionType: 0, sizeLy: "33億 ly", sizeValue: 33, sizeUnitJp: '億', sizeMeter: "3.3 Billion light-years", logSize: 9.52, description: "遠方の銀河や銀河団が巨大な弧状に連なる大規模構造。", descriptionEn: "A large-scale structure where distant galaxies and clusters form a giant arc.", bgColor: "linear-gradient(135deg, #FF8F00 0%, #FFB300 100%)" },
             { name: "ヘルクレス座・かんむり座グレートウォール", nameEn: "Hercules-Corona Borealis Great Wall", fictionType: 0, sizeLy: "100億 ly", sizeValue: 100, sizeUnitJp: '億', sizeMeter: "Length ≈ 10 Billion light-years", logSize: 10, description: "現在知られている宇宙で最大の構造物。", descriptionEn: "The largest known structure in the universe.", bgColor: "linear-gradient(135deg, #F57F17 0%, #FFF59D 100%)" },
-            
+            { name: "観測済みの宇宙", nameEn: "Observed Universe", fictionType: 0, sizeLy: "275億 ly", sizeValue: 275, sizeUnitJp: '億', sizeMeter: "2.60 x 10^26 m", logSize: 10.44, description: "すでに観測済みの宇宙。", descriptionEn: "The universe that has already been observed.", bgColor: "linear-gradient(135deg, #000000 0%, #333333 100%)" },
+            { name: "観測可能な宇宙", nameEn: "Observable Universe", fictionType: 0, sizeLy: "930億 ly", sizeValue: 930, sizeUnitJp: '億', sizeMeter: "8.80 x 10^26 m", logSize: 10.97, description: "宇宙内で観測可能な領域。", descriptionEn: "The region of the universe that is observable from Earth.", bgColor: "linear-gradient(135deg, #1a1a1a 0%, #4a4a4a 100%)" },
+
             // --- Fictional/Conceptual Items (Re-ordered and Corrected) ---
             { name: "量子泡", nameEn: "Quantum Foam", fictionType: 1, sizeLy: "1.709 x 10^-51 ly", sizeMeter: "≈ 10^-35 m", logSize: -50.76, description: "プランクスケールで時空が泡のように揺らいでいるとする理論的描像。", descriptionEn: "A theoretical concept where spacetime fluctuates like foam at the Planck scale.", bgColor: "linear-gradient(135deg, #a7c5d9 0%, #e8eaf6 100%)" },
-            { name: "観測済みの宇宙", nameEn: "Observed Universe", fictionType: 1, sizeLy: "275億 ly", sizeValue: 275, sizeUnitJp: '億', sizeMeter: "2.60 x 10^26 m", logSize: 10.44, description: "すでに観測済みの宇宙。", descriptionEn: "The universe that has already been observed.", bgColor: "linear-gradient(135deg, #000000 0%, #333333 100%)" },
-            { name: "観測可能な宇宙", nameEn: "Observable Universe", fictionType: 1, sizeLy: "930億 ly", sizeValue: 930, sizeUnitJp: '億', sizeMeter: "8.80 x 10^26 m", logSize: 10.97, description: "宇宙内で観測可能な領域。", descriptionEn: "The region of the universe that is observable from Earth.", bgColor: "linear-gradient(135deg, #1a1a1a 0%, #4a4a4a 100%)" },
             { name: "千𥝱(オクトリオン)メートル", nameEn: "One Octillion Meters", fictionType: 1, sizeLy: "1057億 ly", sizeValue: 1057, sizeUnitJp: '億', sizeMeter: "1 x 10^27 m", logSize: 11.02, description: "1千𥝱(オクトリオン)メートルは1000ー𥝱(ヨッタ)メートルです。", descriptionEn: "One octillion meters is 1,000 yottameters.", bgColor: "linear-gradient(135deg, #2a2a2a 0%, #5a5a5a 100%)" },
             { name: "宇宙", nameEn: "The Universe (Estimated)", fictionType: 1, sizeLy: "6000億 ly", sizeValue: 6000, sizeUnitJp: '億', sizeMeter: "5.68 x 10^27 m", logSize: 11.78, description: "推測された宇宙の大きさです。", descriptionEn: "The estimated size of the entire universe.", bgColor: "linear-gradient(135deg, #3a3a3a 0%, #6a6a6a 100%)" },
             { name: "103回折った新聞紙", nameEn: "Newspaper Folded 103 Times", fictionType: 1, sizeLy: "1.072兆 ly", sizeValue: 1.072, sizeUnitJp: '兆', sizeMeter: "1.01 x 10^28 m", logSize: 12.03, description: "新聞紙を103回折ると宇宙より大きくなるみたいです。", descriptionEn: "It is said that folding a newspaper 103 times would make it larger than the universe.", bgColor: "linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%)" },
