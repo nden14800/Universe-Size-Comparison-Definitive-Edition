@@ -21,7 +21,7 @@
         }
 
         body, html {
-            height: 100%;
+            height: 100vh;
             margin: 0;
             font-family: 'Roboto', sans-serif;
             background-color: var(--bg-color);
@@ -76,7 +76,7 @@
             padding: 10px;
             overflow-y: auto;
             transition: opacity var(--animation-duration) ease, transform var(--animation-duration) ease;
-            max-height: 50vh;
+            /* max-height: 50vh; を削除して、グリッドがUIの高さを考慮して柔軟に縮小できるようにする */
         }
 
         #info-top-left {
