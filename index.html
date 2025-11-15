@@ -161,7 +161,8 @@
         #modal-content { background: var(--ui-bg-color); padding: 30px; border-radius: 15px; border: 1px solid var(--border-color); max-width: 90%; width: 600px; text-align: left; position: relative; }
         #modal-content h3 { margin-top: 0; }
         #modal-content ul { padding-left: 20px; }
-        #modal-close-btn { position: absolute; top: 10px; right: 15px; font-size: 1.5rem; color: #fff; background: none; border: none; cursor: pointer; }
+        #modal-close-btn { position: absolute; top: 15px; right: 15px; font-size: 1.5rem; color: #fff; background: none; border: none; cursor: pointer; padding: 5px; display: flex; align-items: center; justify-content: center; }
+        #modal-close-btn svg { width: 1.2rem; height: 1.2rem; }
 
         /* --- Animation Classes --- */
         .fade-out { opacity: 0 !important; transform: scale(0.95) !important; }
@@ -242,7 +243,11 @@
 
     <div id="modal-overlay">
         <div id="modal-content">
-            <button id="modal-close-btn" aria-label="Close">&times;</button>
+            <button id="modal-close-btn" aria-label="Close">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                    <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+                </svg>
+            </button>
             <h3 id="modal-title">使い方</h3>
             <div id="modal-body"></div>
         </div>
@@ -600,6 +605,7 @@
                                 <li>画面中央のオブジェクトや情報パネルの上でマウスホイールをスクロールしても切り替えられます。</li>
                             </ul>
                         </li>
+                        <li><strong>プログレスバー (上部):</strong> バーをクリックまたはドラッグすると、任意の位置に直接ジャンプできます。</li>
                         <li><strong>自動再生:</strong> 「自動再生」ボタンで自動進行のON/OFFを切り替えます。速度はスライダーで調整できます（0.1秒/回〜60秒/回）。</li>
                         <li><strong>サイズスケール (右のバー):</strong>
                             <ul>
@@ -608,7 +614,13 @@
                                 <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16" style="vertical-align: middle;"><path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"/></svg> / <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash-lg" viewBox="0 0 16 16" style="vertical-align: middle;"><path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8"/></svg> ボタンでも拡大・縮小が可能です。</li>
                             </ul>
                         </li>
-                         <li><strong>スケール自動追従:</strong> このスイッチをONにすると、項目を切り替えるたびにスケールバーが自動的にズームし、現在の項目が見やすい位置に来ます。OFFにすると、手動で設定したズームレベルが維持されます。</li>
+                         <li><strong>各種設定 (下部):</strong>
+                            <ul>
+                                <li><strong>自動追従:</strong> ONにすると、項目を切り替えるたびにスケールバーが自動的にズームします。OFFにすると、手動のズームレベルが維持されます。</li>
+                                <li><strong>アニメーション:</strong> 項目の切り替え時のフェードイン・アウト効果のON/OFFを切り替えます。</li>
+                                <li><strong>English/日本語:</strong> 表示言語を英語と日本語で切り替えます。</li>
+                            </ul>
+                        </li>
                     </ul>`,
                 en: `
                     <ul>
@@ -618,6 +630,7 @@
                                 <li>You can also scroll the mouse wheel over the central object or info panels.</li>
                             </ul>
                         </li>
+                        <li><strong>Progress Bar (Top):</strong> Click or drag the bar to jump directly to any point in the sequence.</li>
                         <li><strong>Autoplay:</strong> Toggle automatic progression with the "Autoplay" button. Adjust the speed with the slider (0.1s to 60s per item).</li>
                         <li><strong>Size Scale (Right Bar):</strong>
                             <ul>
@@ -626,7 +639,13 @@
                                 <li>Use the <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16" style="vertical-align: middle;"><path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"/></svg> / <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash-lg" viewBox="0 0 16 16" style="vertical-align: middle;"><path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8"/></svg> buttons to zoom as well.</li>
                             </ul>
                         </li>
-                         <li><strong>Scale Auto-Follow:</strong> When ON, the scale bar automatically centers on the current item. When OFF, your manual zoom level is maintained.</li>
+                         <li><strong>Settings (Bottom):</strong>
+                            <ul>
+                                <li><strong>Auto-Follow:</strong> When ON, the scale bar automatically centers on the current item. When OFF, your manual zoom level is maintained.</li>
+                                <li><strong>Animation:</strong> Toggles the fade-in/out effect when switching between items.</li>
+                                <li><strong>English/日本語:</strong> Switches the display language between English and Japanese.</li>
+                            </ul>
+                        </li>
                     </ul>`
             }
         };
